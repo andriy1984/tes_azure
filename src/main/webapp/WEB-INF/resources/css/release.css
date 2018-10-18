@@ -1,0 +1,48 @@
+.status-name, .release-description {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.release-name {
+    margin-top: 20px;
+    font-size: 37px;
+}
+
+.release-name small {
+    font-size: 20px;
+}
+
+.project-name {
+    font-weight: bold;
+}
+
+.issues-panel {
+    margin-bottom: 10px;
+    margin-top: 25px;
+}
+
+.release-issues {
+    margin-top: 20px;
+}
+
+.release-issues .fa-edit {
+    margin-left: 4px;
+    margin-right: 7px;
+}
+
+.issues-panel a {
+    min-width: 50%;
+}
+
+.issues-panel .input-group {
+    width: 100%
+}
+
+label.error {
+    margin-top: 10px;
+    color: #d33700;
+}
+
+#modalChangeIssue .modal-content {
+    background-color: #DBFFD5;
+}

@@ -1,0 +1,53 @@
+span.select2-container .select2-selection {
+    height: 34px !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: #ccc;
+}
+
+input#imgfileInput.form-control {
+    height: inherit;
+}
+
+#pagerID .pagination li a,
+#pagerID .pagination li a:hover,
+#pagerID .pagination li a:focus {
+    color: #784A3B;
+}
+
+.user-history ul li {
+    margin-top: 12px;
+}
+
+.user-history .createTime {
+    font-size: 11px;
+    color: darkgray;
+}
+
+.user-history .user-comment {
+    width: 30%;
+    color: grey;
+    padding: 6px 6px;
+    border: 1px #c3c3c3 solid;
+    border-radius:4px;
+}
+
+.user-history .removed-user {
+    color: #ff755d;
+}
+
+.disabled-icon {
+    color: grey;
+    margin-left: 8px;
+    margin-right: 11px;
+}
+
+#pageID .pagination li a,
+#pageID .pagination li a:hover,
+#pageID .pagination li a:focus {
+    color: #784A3B;
+}
+
+.error-msg{
+    color: #b94a48;
+}

@@ -1,0 +1,36 @@
+.issue-history .removed-user {
+    color: #ff755d;
+}
+
+.issue-history ul li {
+    margin-top: 12px;
+}
+
+.issue-history .createTime {
+    font-size: 11px;
+    color: darkgray;
+}
+
+.issue-history .history-issue-comment {
+    width: 70%;
+    color: grey;
+    padding: 6px 6px;
+    border: 1px #c3c3c3 solid;
+    border-radius:4px;
+}
+
+.issue-comment {
+    width: 100%;
+    margin-right: 10%;
+    color: grey;
+    padding: 6px 6px;
+    border: 1px #c3c3c3 solid;
+    border-radius:4px;
+}
+
+#scrollButtons {
+    position: fixed;
+    opacity: 0.7;
+    right: 5%;
+    bottom: 15%;
+}

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <!--Abstract definition: it is a definition in which the template attributes are not completely filled.
+    It creates base page and a number of extending definitions, reusing already created layout.-->
+
+    <!--Absent attributes:
+      - content
+      - title
+      -->
+
+    <definition name="abstractDefaultTemplate" template="/WEB-INF/layouts/template.jsp">
+        <put-attribute name="header" value="/WEB-INF/layouts/header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"/>
+        <put-list-attribute name="stylesheets">
+            <add-attribute value="/css/bootstrap.min.css"/>
+            <add-attribute value="/css/bootstrap-theme.min.css"/>
+            <add-attribute value="/css/select2.min.css"/>
+            <add-attribute value="/css/font-awesome.min.css"/>
+            <add-attribute value="/css/login.css"/>
+            <add-attribute value="/css/site.css"/>
+            <add-attribute value="/css/navbar-center.css"/>
+            <add-attribute value="/css/bootstrap-select.min.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts">
+            <add-attribute value="/js/jquery-2.2.4.min.js"/>
+            <add-attribute value="/js/bootstrap.min.js"/>
+            <add-attribute value="/js/bootstrap-select.min.js"/>
+            <add-attribute value="/js/select2.full.min.js"/>
+            <add-attribute value="/js/jquery.validate.min.js"/>
+            <add-attribute value="/js/menu.js"/>
+            <add-attribute value="/js/bootstrap-select.min.js"/>
+            <add-attribute value="/js/login.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="index" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="BugTrckr software"/>
+        <put-attribute name="content" value="/WEB-INF/views/index.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/login.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+        </put-list-attribute>
+    </definition>
+
+    <definition name="about" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="BugTrckr software"/>
+        <put-attribute name="content" value="/WEB-INF/views/info/about.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/about.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Label-->
+    <definition name="label" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Label page"/>
+        <put-attribute name="content" value="/WEB-INF/views/label/label.jsp"/>
+    </definition>
+
+    <!--History-->
+    <definition name="history" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="History page"/>
+        <put-attribute name="content" value="/WEB-INF/views/history/history.jsp"/>
+    </definition>
+
+    <!--Issue-->
+    <definition name="issue" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Issues page"/>
+        <put-attribute name="content" value="/WEB-INF/views/issue/issue.jsp"/>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/issue/issue.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="issue_form" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Issue add/edit"/>
+        <put-attribute name="content" value="/WEB-INF/views/issue/issue_form.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+            <add-attribute value="/css/issue/jquery-ui.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/issue/jquery-ui.js"/>
+            <add-attribute value="/js/issue/issue-page.js"/>
+            <add-attribute value="/js/issue/issue_form.js"/>
+            <add-attribute value="/js/issue/datepicker.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="issue_view" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Issue page"/>
+        <put-attribute name="content" value="/WEB-INF/views/issue/issue_view.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/issue/issue.css"/>
+            <add-attribute value="/css/issue/jquery-ui.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/issue/issue_view.js"/>
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/issue/jquery-ui.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Project-->
+    <definition name="projects" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Projects"/>
+        <put-attribute name="content" value="/WEB-INF/views/project/projects.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+            <add-attribute value="/css/project.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/project/project.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="project" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Project page"/>
+        <put-attribute name="content" value="/WEB-INF/views/project/project.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/project.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/project/project.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="project_form" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Projects form"/>
+        <put-attribute name="content" value="/WEB-INF/views/project/project_form.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/release.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/project/project_form.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="users_without_project" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="usersWithoutProject"/>
+        <put-attribute name="content" value="/WEB-INF/views/project/users_without_project.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/project.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/project/users_without_project.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Release-->
+    <definition name="release" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Release"/>
+        <put-attribute name="content" value="/WEB-INF/views/release/release.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/release.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/release/release-page.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="releaseform" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Release add/edit"/>
+        <put-attribute name="content" value="/WEB-INF/views/release/release_form.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/release.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/release/release_form.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--User-->
+    <definition name="users" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="User page"/>
+        <put-attribute name="content" value="/WEB-INF/views/user/users.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/user/users.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userform" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="User add"/>
+        <put-attribute name="content" value="/WEB-INF/views/user/userform.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/user/user_form.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="user_form_edit" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="User edit"/>
+        <put-attribute name="content" value="/WEB-INF/views/user/user_form_edit.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/ckeditor/ckeditor.js"/>
+            <add-attribute value="/js/user/user_form_edit.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <definition name="userview" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="User add/edit"/>
+        <put-attribute name="content" value="/WEB-INF/views/user/userview.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/user.css"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Admin-->
+    <definition name="admin" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Admin dashboard"/>
+        <put-attribute name="content" value="/WEB-INF/views/user/admin/admin.jsp"/>
+        <put-list-attribute name="stylesheets" inherit="true">
+            <add-attribute value="/css/admin/datatables.min.css"/>
+            <add-attribute value="/css/admin/admin-page.css"/>
+        </put-list-attribute>
+        <put-list-attribute name="javascripts" inherit="true">
+            <add-attribute value="/js/admin/datatables.min.js"/>
+            <add-attribute value="/js/admin/admin-page.js"/>
+        </put-list-attribute>
+    </definition>
+
+    <!--Access Denied-->
+    <definition name="accessDenied" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="401 Access Denied"/>
+        <put-attribute name="content" value="/WEB-INF/views/access/accessdenied.jsp"/>
+    </definition>
+
+
+    <definition name="search_result" extends="abstractDefaultTemplate">
+        <put-attribute name="title" value="Search board"/>
+        <put-attribute name="content" value="/WEB-INF/views/search/search_result.jsp"/>
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,13 @@
+package com.softserverinc.edu.entities.enums;
+
+public enum HistoryAction {
+    CREATE_ISSUE,
+    CHANGE_ISSUE_STATUS,
+    CHANGE_ISSUE_ASSIGNEE,
+    CHANGE_ISSUE_TITLE,
+    CHANGE_ISSUE_TYPE,
+    CHANGE_ISSUE_PRIORITY,
+    CHANGE_ISSUE_DESCRIPTION,
+    ADD_ISSUE_COMMENT,
+    EDIT_ISSUE_COMMENT;
+}

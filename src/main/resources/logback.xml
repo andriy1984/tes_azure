@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>
+    <property name="LOG_HOME" value="/media/ihorlt/P2LIN/Projects/AgileSoftware/logs"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="fileImage" class="ch.qos.logback.core.FileAppender">
+        <fileImage>${LOG_HOME}/error.log</fileImage>
+        <append>true</append>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="org.springframework.web" level="INFO"/>
+
+    <logger name="org.springframework.security.web.FilterChainProxy" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+    </root>
+
+</configuration>
